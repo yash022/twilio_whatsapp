@@ -26,6 +26,14 @@ def reply(msg):
   print(message.sid)
   return "Message has been sent successfully"
 
+@app.route('/sms/<string:msg>')
+def sms(msg):
+    message = client.messages.create(
+    from_='+14063193114',
+    body=msg,
+    to='+917291918201')
+    print(message.sid)
+    return "Sms has been sent successfully"
     
 if __name__ == "__main__":
     app.run(debug=True)
