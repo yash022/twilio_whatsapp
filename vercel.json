@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/whatsapp" }
+    { "source": "/(.*)", "destination": "/api/whatsapp" }
   ]
 }
